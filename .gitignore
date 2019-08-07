@@ -1,0 +1,12 @@
+# compiled output
+css/
+js/
+*.html
+
+# dependencies
+node_modules
+npm-debug.log
+
+# System Files
+.DS_Store
+Thumbs.db

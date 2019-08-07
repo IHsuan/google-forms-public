@@ -1,0 +1,12 @@
+@import "common";
+@import "component/questionnaire";
+
+.ih-page-index {
+    .ih-section-questionnaire {
+        padding: 45px 15px 45px 0;
+
+        @include md {
+            padding: 45px 20px;
+        }
+    }
+}

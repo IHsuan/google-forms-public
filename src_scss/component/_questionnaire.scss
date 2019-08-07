@@ -1,0 +1,92 @@
+.ih-component-questionnaire {
+    .ih-form {
+        font-size: 16px;
+        color: #4d4d4d;
+
+        @include md {
+            font-size: 20px;
+        }
+
+        li {
+            margin-bottom: 45px;
+        }
+
+        .ih-question {
+            margin-bottom: 25px;
+            color: #1a1a1a;
+        }
+
+        .ih-option {
+            margin-bottom: 10px;
+            position: relative;
+
+            &.ih-theme-radio {
+                i:before {
+                    content: "\f10c";
+                }
+
+                input:checked~label i:before {
+                    content: "\f111";
+                }
+            }
+
+            &.ih-theme-checkbox {
+                i:before {
+                    content: "\f096";
+                }
+
+                input:checked~label i:before {
+                    content: "\f0c8";
+                }
+            }
+
+            &:hover label {
+                text-decoration: underline;
+            }
+
+            input {
+                position: absolute;
+            }
+
+            i {
+                width: 20px;
+                margin-right: 5px;
+            }
+        }
+
+        .ih-input-text {
+            height: 30px;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #4d4d4d;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .ih-submit {
+            width: 150px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #000;
+            font-size: 20px;
+            color: #fff;
+            transition: 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .ih-modal {
+        button {
+            border: 0;
+            background-color: #000;
+
+            &:hover {
+                background-color: #fae680;
+                color: #000;
+            }
+        }
+    }
+}

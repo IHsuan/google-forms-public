@@ -1,0 +1,33 @@
+@import "setting";
+
+@import "component/header";
+@import "component/footer";
+
+body {
+    &:before {
+        display: none;
+        content: "xs";
+
+        @include sm {
+            content: "sm";
+        }
+
+        @include md {
+            content: "md";
+        }
+
+        @include lg {
+            content: "lg";
+        }
+
+        @include xl {
+            content: "xl";
+        }
+
+        @include xxl {
+            content: "xxl";
+        }
+    }
+}
+
+.ih-page {}

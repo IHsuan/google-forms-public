@@ -1,0 +1,21 @@
+{
+    "name": "google-forms",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "npm install ; gulp"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "compass-importer": "^0.4.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-babel": "^7.0.1",
+        "gulp-concat": "^2.6.1",
+        "gulp-sass": "^3.2.1",
+        "gulp-uglify": "^3.0.0",
+        "pump": "^3.0.0"
+    },
+    "author": "IHsuan <frostyjoan0829@livemail.tw>"
+}

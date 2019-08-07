@@ -1,0 +1,70 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+hr {
+    margin: 0;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    // z-index: 999;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: $font-family;
+    font-size: 16px;
+    color: #000;
+}
+
+a,
+a:focus,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+// ========== third ==========
+[v-cloak] {
+    display: none;
+}

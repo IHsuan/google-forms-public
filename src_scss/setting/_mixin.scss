@@ -1,0 +1,88 @@
+@mixin imgCover($position, $clip) {
+    background-clip: $clip;
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin ratio($padding) {
+    width: 100%;
+    height: 0;
+    padding: 0 0 $padding !important;
+    overflow: hidden;
+}
+
+// ========== RWD ==========
+// ===== 自訂 =====
+@mixin mobile {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+
+@mixin xxs {
+    @media (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: 1367px) {
+        @content;
+    }
+}
+
+@mixin portrait {
+    @media (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+    }
+}
+
+// ===== 配合 Bootstrap 4 =====
+@mixin sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
