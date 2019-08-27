@@ -1,0 +1,11 @@
+@import "common";
+
+.ih-page-admin {
+    .ih-section-form {
+        padding: 30px;
+
+        @include md {
+            padding: 50px 30px 100px;
+        }
+    }
+}

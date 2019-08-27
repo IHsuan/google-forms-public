@@ -7,6 +7,9 @@
     $title = '';
     $page = 'index';
     require('./component/common/head.php');
+
+    $googleFormId = $_POST['googleFormId'];
+    $googleSheetId = $_POST['googleSheetId'];
 ?>
 </head>
 
@@ -19,7 +22,7 @@
 
 <div class="ih-page-<?php echo $page ?> ih-page">
     <div class="ih-section-questionnaire">
-        <div class="ih-container container-fluid">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md-6 offset-md-3 col-xl-4 offset-xl-4">
                     

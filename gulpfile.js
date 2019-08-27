@@ -13,7 +13,8 @@ var uglify = require('gulp-uglify');
 
 
 var pages = [
-    'index'
+    'index',
+    'admin'
 ];
 
 // ===== css =====
@@ -29,7 +30,7 @@ gulp.task('css', async function () {
             .pipe(
                 gulpSass({
                     importer: compass,
-                    outputStyle: 'expanded'
+                    outputStyle: 'compressed'
                     // outputStyle: 'compressed'
                 }).on('error', gulpSass.logError))
             .pipe(autoprefixer())
@@ -60,7 +61,7 @@ gulp.task('js', async function () {
                 .pipe(babel({
                     presets: ['env']
                 })),
-            // uglify(),
+            uglify(),
             gulp.dest('./js')
         ]);
     });

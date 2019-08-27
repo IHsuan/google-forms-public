@@ -1,0 +1,4 @@
+RewriteEngine on
+
+# 將檔名中沒有 / 和 . 的檔名，轉向到 .php
+RewriteRule ^([^./]+)/?$ $1.php [L]
