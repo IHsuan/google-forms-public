@@ -1,3 +1,11 @@
+<?php 
+    $googleFormId = $_POST['googleFormId'];
+    $googleSheetId = $_POST['googleSheetId'];
+    if (!$googleFormId || !$googleSheetId) {
+        header( 'Location: ./admin' ) ;
+    }
+?>
+
 <!doctype html>
 <html lang="zh-Hant">
 <head>
@@ -7,9 +15,6 @@
     $title = '';
     $page = 'index';
     require('./component/common/head.php');
-
-    $googleFormId = $_POST['googleFormId'];
-    $googleSheetId = $_POST['googleSheetId'];
 ?>
 </head>
 
