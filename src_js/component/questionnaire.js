@@ -8,6 +8,10 @@ $(window).on('load', function () {
 
             this.question = '';
             this.answerList = [];
+            this.answerOther = {
+                name: '',
+                required: false
+            };
         }
     }
 
@@ -18,10 +22,12 @@ $(window).on('load', function () {
         data: {
             message: '',
             heading: '',
+            description: '',
             questionList: []
         },
+
         methods: {
-            submit: function () {
+            submit() {
                 const self = this;
                 const $form = $('#questionnaire form');
                 const actionUrl = $form.attr('action');
@@ -75,13 +81,18 @@ $(window).on('load', function () {
                     });
 
                 });
+            },
+
+            isAnswerOtherRequired(question) {
+                question.answerOther.required = !question.answerOther.required;
             }
         },
-        mounted: function () {
+        mounted() {
             const self = this;
 
             // ===== Google 表單（問卷） =====
             self.heading = $('#spider .freebirdFormviewerViewHeaderTitle').text().trim();
+            self.description = $('#spider .freebirdFormviewerViewHeaderDescription').text().trim();
 
             $('#spider .freebirdFormviewerViewNumberedItemContainer').each(function () {
                 const $container = $(this);
@@ -169,6 +180,14 @@ $(window).on('load', function () {
                 if (['radio', 'checkbox'].indexOf(question.type) !== -1) {
                     $container.find('.exportLabel').each(function () {
                         question.answerList.push($(this).text().trim());
+                    });
+
+                    // 單選其他 freebirdFormviewerViewItemsRadioOtherChoice
+                    // 多選其他 freebirdFormviewerViewItemsCheckboxOtherChoice
+                    ['.freebirdFormviewerViewItemsRadioOtherChoice', '.freebirdFormviewerViewItemsCheckboxOtherChoice'].forEach((checkClass) => {
+                        if (!!$container.find(checkClass).length) {
+                            question.answerOther.name = `${question.name}.other_option_response`;
+                        }
                     });
                 }
 

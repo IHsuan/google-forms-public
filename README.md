@@ -37,7 +37,8 @@ Google Sheet：
     <script type="text/javascript" src="js/questionnaire.js"></script>
 
 ## 潛規則
-    暫時只接收 3 種題型：單選、多選、簡答
+    暫時只接收 3 種題型：單選、多選、簡答 
+    其中，單選、多選可能有「其他」的欄位選項
     簡答題：欄位名稱若包含「電話、手機」、「Email、email、郵件、信箱」會被檢查格式
 
 

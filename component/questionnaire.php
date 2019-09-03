@@ -26,14 +26,29 @@
                             :type="question.type" 
                             :id="`${question.name}-${idx}`" 
                             :name="question.name"
+                            value="__other_option__"
+                            :required="question.required"
+                            @change="isAnswerOtherRequired(question)"
+                            v-if="question.answerOther.name && (idx + 1 === question.answerList.length)">
+                        <input class="ih-opacity-0"
+                            :type="question.type" 
+                            :id="`${question.name}-${idx}`" 
+                            :name="question.name"
                             :value="answer"
-                            :required="question.required">
+                            :required="question.required"
+                            v-else>
                         <label class="ih-pointer" 
                             :for="`${question.name}-${idx}`">
                             <i class="fa fa-circle-o" aria-hidden="true"></i>
                             {{ answer }}
                         </label>
                     </div>
+                    <input class="ih-input-text form-control"
+                        type="text"
+                        :name="question.answerOther.name"
+                        :required="question.answerOther.required"
+                        :disabled="!question.answerOther.required"
+                        v-if="question.answerOther.name"> 
                 </li>
 
                 <!-- 3: 簡答 -->
